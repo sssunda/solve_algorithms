@@ -5,9 +5,9 @@ def solution(n, arr1, arr2):
     result_2 = []
     
     for i in range(n):
-        result_1.append(divide(n, arr1[i]))
-        result_2.append(divide(n, arr2[i]))
-
+        result_1.append(str(bin(arr1[i]))[2:].rjust(n,'0'))
+        result_2.append(str(bin(arr2[i]))[2:].rjust(n,'0'))
+        
         for j in range(n):
             if result_1[i][j] == '1' or result_2[i][j] == '1' :
                 answer[i] += '#'
@@ -15,14 +15,6 @@ def solution(n, arr1, arr2):
                 answer[i] += ' '  
 
     return answer
-
-def divide(n, e):
-    result = []
-    for _ in range(n):
-        result.append(str(e%2))
-        e = e//2
-    result.reverse()
-    return "".join(result)
 
 
 if __name__ == '__main__':
