@@ -1,6 +1,5 @@
 def solution(n, arr1, arr2):
     answer = [''*m for m in range(n)] 
-<<<<<<< HEAD
     
     for i in range(n):
         result_1 = str(bin(arr1[i]))[2:].rjust(n,'0')
@@ -8,18 +7,6 @@ def solution(n, arr1, arr2):
         
         for j in range(n):
             if result_1[j] == '1' or result_2[j] == '1' :
-=======
-
-    result_1 = []
-    result_2 = []
-    
-    for i in range(n):
-        result_1.append(str(bin(arr1[i]))[2:].rjust(n,'0'))
-        result_2.append(str(bin(arr2[i]))[2:].rjust(n,'0'))
-        
-        for j in range(n):
-            if result_1[i][j] == '1' or result_2[i][j] == '1' :
->>>>>>> 318dd3bc45e7949dfdcc70e78a8706a31bc0622c
                 answer[i] += '#'
             else :
                 answer[i] += ' '  
